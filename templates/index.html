@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+  <div class="card text-center border-dark p-3">
+      <div clas="card-body">
+          <h1>Unit Converter</h1>
+      </div>
+      <div class="card-body">
+        <img src="{{url_for('static', filename='logo.png')}}" style="width: 50%;" alt="">
+      </div>
+      <div class="card-body">
+
+        This is a unit converter made for the extra credit project in Dr. Takacs's PHYS 2210 class.
+      </div>
+      <div class="card-body">
+        <a href="/select_units" class="btn btn-secondary btn-lg btn-block">Click Here to Convert</a>
+      </div>
+
+
+  </div>
+</div>
+{% endblock %}

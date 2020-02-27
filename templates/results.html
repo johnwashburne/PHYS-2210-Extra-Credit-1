@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+  <div class="card text-center border-dark p-3">
+      <div clas="card-body">
+          <h1>Conversion Results</h1>
+      </div>
+      <div class="card-body">
+        {{starting_value}} {{starting_unit}} = {{final}} {{target_unit}}
+      </div>
+      <div class="card-body">
+        <a href="/select_units" class="btn btn-secondary btn-lg btn-block">Make another conversion</a>
+      </div>
+
+
+  </div>
+</div>
+{% endblock %}

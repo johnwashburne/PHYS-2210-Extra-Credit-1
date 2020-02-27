@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+  <div class="card text-center border-dark p-3">
+      <div clas="card-body">
+          <h1>Convert {{unit_class}}</h1>
+      </div>
+      <div class="card-body">
+        <form class="" action="/results" method="post">
+          <div class="form-group">
+            <label for="staticUnitClass">Unit Class</label>
+            <input type="text" readonly class="form-control-plaintext" id="staticUnitClass" value="{{unit_class}}" name="unit_class">
+
+
+            <label for="starting_unit">Select Starting Unit</label>
+            <select class="form-control" id="starting_unit" name="starting_unit">
+              {% for u in units %}
+              <option>{{u}}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <label for="starting_value">Starting Value</label>
+          <input class="form-control" type="number" step="any" placeholder="Enter Starting Value Here:" id="starting_value" name="starting_value" required>
+
+          <div class="form-group">
+            <label for="target_unit">Select Starting Unit</label>
+            <select class="form-control" id="target_unit" name="target_unit">
+              {% for u in units %}
+              <option>{{u}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <input type="submit" class="btn btn-secondary btn-lg btn-block" value="Convert">
+        </form>
+      </div>
+
+
+  </div>
+</div>
+{% endblock %}

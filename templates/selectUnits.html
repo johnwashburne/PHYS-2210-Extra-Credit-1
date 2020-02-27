@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+  <div class="card text-center border-dark p-3">
+      <div clas="card-body">
+          <h1>Unit Converter</h1>
+      </div>
+      <div class="card-body">
+        <div class="row">
+
+          <div class="col-md-4 col-sm-6 d-flex align-items-stretch w-100">
+            <div class="card w-100">
+              <div class="card-body">
+                <h5 class="card-title">Temperature</h5>
+                <p class="card-text">Kelvin, Fahrenheight, and Celsius</p>
+                <form class="" action="/convert" method="post">
+                  <input type="submit" class="btn btn-secondary" name="unit" value="Temperature">
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
+            <div class="card w-100">
+              <div class="card-body">
+                <h5 class="card-title">Length</h5>
+                <p class="card-text">Meters, Kilometers, Millimeters, Feet, Inches, Yards, and Miles</p>
+                <form class="" action="/convert" method="post">
+                  <input type="submit" class="btn btn-secondary" name="unit" value="Length">
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
+            <div class="card w-100">
+              <div class="card-body">
+                <h5 class="card-title">Mass</h5>
+                <p class="card-text">Kilograms, Grams, and Pounds</p>
+                <form class="" action="/convert" method="post">
+                  <input type="submit" class="btn btn-secondary" name="unit" value="Mass">
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+  </div>
+</div>
+{% endblock %}
